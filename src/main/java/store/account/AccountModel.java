@@ -35,7 +35,7 @@ public class AccountModel {
         this.id = a.id();
         this.name = a.name();
         this.email = a.email();
-        this.passwordSha256 = a.passwordSha256();
+        this.passwordSha256 = a.hashPassword();
     }
 
     public Account to() {
@@ -43,7 +43,7 @@ public class AccountModel {
             .id(this.id)
             .name(this.name)
             .email(this.email)
-            .passwordSha256(this.passwordSha256)
+            .hashPassword(this.passwordSha256)
             .build();
     }
 
